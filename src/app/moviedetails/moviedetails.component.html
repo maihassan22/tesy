@@ -1,0 +1,24 @@
+<div class="container">
+    <div *ngIf='isLoding==true' class="row">
+        <div class="col-md-9">
+            <div class="posterImg py-5">
+            <img [src]="trendingMoviesimg+moviesDetails.poster_path" class="w-100 " >
+                   </div>
+            <div class="details">
+                <h2 class="p-2">{{moviesDetails.original_title}}</h2>
+                <p class="lead voteMovie">{{moviesDetails.vote_average}}</p>
+               <p class="lead">{{moviesDetails.overview}}</p>
+              </div>
+        </div>
+        <div class="col-md-3 p-5 test">
+            <h3 class="text-center py-1">TOP TEN:</h3>
+            <div *ngFor='let movie of topTen' class="movieItem">
+                <img [src]="trendingMoviesimg+movie.poster_path" class="w-100">
+                <h5>{{movie.title}}</h5>
+            </div>
+        </div> 
+    </div>
+    
+</div>
+
+

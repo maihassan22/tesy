@@ -1,0 +1,33 @@
+$bgbody:#131722;
+$mainColor:#fff;
+$secondColor:#949cb0;
+$bgColor:#24baef;
+
+body
+{
+    background-color: $bgbody;
+    color: $mainColor;
+}
+.bg-main
+{
+    color: $mainColor;
+}
+.bg-second
+{
+    color: $secondColor;
+}
+.voete
+{
+    background-color: $bgColor;
+    color: $mainColor;
+    height: 40px;
+    width: 40px;
+    top:0;
+    right: 20px;
+}
+.voteMovie
+{
+    color: $bgColor;
+    font-weight: bold;
+    font-size: 30px !important;
+}

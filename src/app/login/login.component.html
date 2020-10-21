@@ -1,0 +1,31 @@
+
+
+
+<section id="login" class="position-relative">
+<div *ngIf='err' class="alert alert-danger m-2 px-2 ">{{err}}</div>
+<form [formGroup]='signinForm' (ngSubmit)='getFormData(signinForm)' class="position-absolute w-50 m-auto py-5 myForm">
+
+
+    <div class="form-group">
+        <label>E-mail:</label>
+        <input [class.is-invalid]='signinForm.get("email").invalid==true && signinForm.get("email").touched==true '
+        type="text" formControlName='email' class="form-control">
+        <span *ngIf='signinForm.get("email").invalid==true && signinForm.get("email").touched==true ' class="m-3 p-2 text-danger  d-block">E-mail is not valid</span>
+    </div>
+
+    <div class="form-group">
+        <label>Password:</label>
+        <input [class.is-invalid]='signinForm.get("password").invalid==true && signinForm.get("password").touched==true '
+        type="text" formControlName='password' class="form-control">
+        <span *ngIf='signinForm.get("password").invalid==true && signinForm.get("password").touched==true ' class="m-3 p-2 text-danger  d-block">password is not valid</span>
+    </div>
+    <div class="p-2">
+        <a routerLink='/register'>
+            sign Up
+        </a>
+    </div>
+
+    <button [disabled]='signinForm.invalid==true' type="submit" class="btn btn-primary m-1">sign in</button>
+</form>
+</section>
+

@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col-md-4 text-center bg-main d-flex align-items-center">
+            <h2>Trending TV
+                <br>
+                Right Now
+            </h2>
+        </div>
+
+
+        <div *ngFor='let tv of trendingTv' class="col-md-2 py-4">
+          
+            <div id="trendingMov" class="position-relative">
+             <img [src]="trendingTvimg+tv.poster_path" class="w-100" >
+             <h6 class="bg-main py-3 text-center">{{tv.original_name}}</h6>
+              <div class="text-center voete position-absolute">{{tv.vote_average}}</div>
+            </div>
+     
+
+       </div>
+    </div>
+</div>
